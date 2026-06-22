@@ -1,6 +1,6 @@
 # Update Workflow
 
-This repo keeps the public workflow for producing two final generated outputs: `05_comparisons/` for strategy-level benchmark review and `06_portfolio_selection/` for portfolio construction plus website handoff. Real outputs are ignored and should be regenerated locally.
+This repo keeps the public workflow for producing two final generated outputs: `05_comparisons/` for strategy-level benchmark review and `06_portfolio_selection/` for portfolio construction plus app/website handoff. The workflow can also serve as a reference for future app portfolio features and for fast market-requested chart/result generation. Real outputs are ignored and should be regenerated locally.
 
 ## Configuration
 

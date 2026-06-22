@@ -11,7 +11,7 @@ First principle: every artifact has one owner. Raw facts come from external syst
 | `03_market_data/` | `buy_hold_cap_day_bars.json`; `portfolio_benchmark_day_bars.csv` | Market close series used for buy-and-hold and fixed benchmark windows. | `01`, Router ref-price tables, CAP |
 | `04_llm_benchmark/` | `llm_benchmark_rows.json`; `llm_benchmark_decisions.json` | LLM benchmark rows over each paper window. | `01`, `02`, Router PostgreSQL |
 | `05_comparisons/` | `paper_minus_benchmarks_sorted.csv` | Strategy-level paper-vs-LLM and paper-vs-buy-hold rankings. | `01`, `02`, `03`, `04` |
-| `06_portfolio_selection/` | `stock_equal_weight_portfolio.csv`; `crypto_equal_weight_portfolio.csv`; `portfolio_equity_curves.json`; `selection_audit.json` | Final stock/crypto portfolios, benchmark pass/fail, website curve handoff, selection audit. | `01`, `02`, `03`, `05`, `07`, Router PostgreSQL, CAP |
+| `06_portfolio_selection/` | `stock_equal_weight_portfolio.csv`; `crypto_equal_weight_portfolio.csv`; `portfolio_equity_curves.json`; `selection_audit.json` | Final stock/crypto portfolios, benchmark pass/fail, app/website curve handoff, market chart output, selection audit. | `01`, `02`, `03`, `05`, `07`, Router PostgreSQL, CAP |
 | `07_backtest_trade_logs/` | `backtest_trade_log_index.csv`; `trade_logs/*.csv`; `backtest_compounded_summary.csv` | Downloaded strategy trade logs and scripted backtest return from daily `pnl`. | `01`, CHFS |
 | `scripts/` | Script source files | Refresh, build, and verification process. | Repo data plus local ignored config |
 | `fixtures/tiny/` | Tiny synthetic examples | Public schema reference only. | None |
@@ -47,7 +47,7 @@ flowchart TD
   M07 --> M06
 
   M05 --> Review[Strategy review]
-  M06 --> Website[Website handoff]
+  M06 --> Handoff[App/website handoff]
 ```
 
 ## Minimal Calculations

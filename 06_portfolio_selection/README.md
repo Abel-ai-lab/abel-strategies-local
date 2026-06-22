@@ -1,6 +1,12 @@
 # 06 Portfolio Selection
 
-Generated portfolio construction and website curve handoff layer.
+Generated portfolio construction and app/website curve handoff layer.
+
+## Product Role
+
+This folder is the portfolio feature workbench. It is used to prototype and verify portfolio construction logic before deciding what belongs in the app.
+
+The current app portfolio surface is intentionally light. New ideas such as scanning Abel account strategies into portfolio candidates, changing selection rules, producing benchmark comparisons, or preparing market-requested charts should be implemented and validated here first. Once a workflow is stable, migrate only the data contract and product behavior needed by the app.
 
 ## Depends On
 

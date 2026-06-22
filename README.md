@@ -1,6 +1,12 @@
 # Tickers List Workflow
 
-Public workflow repo for generating an Abel strategy, benchmark, and portfolio data pack. The repository keeps the generation/update/verification code and dependency documentation, but real generated data is intentionally ignored and not tracked.
+Public workflow repo for generating an Abel strategy, benchmark, and portfolio data pack. This repo is a local workbench for validating portfolio-related workflows and market-facing data requests, not the app product itself. The repository keeps the generation/update/verification code and dependency documentation, but real generated data is intentionally ignored and not tracked.
+
+## Product Positioning
+
+This workbench can be used as a reference flow for future app portfolio features, especially the parts that scan Abel strategies, build candidate portfolios, compare benchmarks, and produce curve/chart handoff data. Portfolio ideas should be proven here first with focused data outputs, then only stable workflow and data contracts should move into the app.
+
+The workbench can also quickly produce temporary market-requested charts and result packs. Those generated outputs remain local, ignored artifacts unless they are converted into synthetic fixtures or public documentation.
 
 ## What Is Tracked
 
