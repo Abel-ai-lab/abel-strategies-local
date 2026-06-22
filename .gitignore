@@ -1,0 +1,33 @@
+.env
+config/*.local.yaml
+config/*.local.yml
+*.tmp
+__pycache__/
+*.py[cod]
+.venv/
+
+# Generated data artifacts. Keep generation/update code and README files tracked,
+# but do not publish real strategy, market, paper, benchmark, or trade-log data.
+manifest.json
+01_strategy_universe/*
+!01_strategy_universe/README.md
+02_paper_actuals/*
+!02_paper_actuals/README.md
+03_market_data/*
+!03_market_data/README.md
+04_llm_benchmark/*
+!04_llm_benchmark/README.md
+05_comparisons/*
+!05_comparisons/README.md
+06_portfolio_selection/*.csv
+06_portfolio_selection/*.json
+06_portfolio_selection/*.html
+07_backtest_trade_logs/*.csv
+07_backtest_trade_logs/*.json
+07_backtest_trade_logs/trade_logs/
+!07_backtest_trade_logs/README.md
+references/*.json
+references/*.csv
+references/*.html
+references/tmp_*
+references/selected_*

@@ -1,0 +1,24 @@
+router:
+  host: 127.0.0.1
+  port: 8080
+
+postgres:
+  dbname: abel-prod
+  host: localhost
+  port: 5432
+  username: postgres
+  password: replace-with-local-password
+
+datacenter_postgres:
+  dbname: trade
+  host: localhost
+  port: 5432
+  username: postgres
+  password: replace-with-local-password
+
+redis:
+  host: localhost
+  port: 6379
+  db: 0
+  username: ""
+  password: replace-with-local-password

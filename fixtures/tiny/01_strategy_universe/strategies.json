@@ -1,0 +1,20 @@
+[
+  {
+    "strategy_id": "1001",
+    "session_id": "fixture-session-stock",
+    "target_asset": "AAA",
+    "asset_type": "equity",
+    "display_name": "Fixture Stock Strategy",
+    "required_symbols": ["AAA"],
+    "backtest_trade_log_uri": "efs://fixture/1001.csv"
+  },
+  {
+    "strategy_id": "2001",
+    "session_id": "fixture-session-crypto",
+    "target_asset": "BTCUSD",
+    "asset_type": "crypto",
+    "display_name": "Fixture Crypto Strategy",
+    "required_symbols": ["BTCUSD"],
+    "backtest_trade_log_uri": "efs://fixture/2001.csv"
+  }
+]

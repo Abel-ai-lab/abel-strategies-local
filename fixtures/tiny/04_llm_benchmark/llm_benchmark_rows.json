@@ -1,0 +1,4 @@
+[
+  {"strategy_id": "1001", "target_asset": "AAA", "llm_return": 0.005},
+  {"strategy_id": "2001", "target_asset": "BTCUSD", "llm_return": 0.002}
+]

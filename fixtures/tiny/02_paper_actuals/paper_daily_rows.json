@@ -1,0 +1,6 @@
+[
+  {"strategy_id": "1001", "trading_date": "2026-01-01", "close": 100.0, "pnl": 0.0},
+  {"strategy_id": "1001", "trading_date": "2026-01-02", "close": 102.0, "pnl": 0.02},
+  {"strategy_id": "2001", "trading_date": "2026-01-01", "close": 50000.0, "pnl": 0.0},
+  {"strategy_id": "2001", "trading_date": "2026-01-02", "close": 50500.0, "pnl": 0.01}
+]

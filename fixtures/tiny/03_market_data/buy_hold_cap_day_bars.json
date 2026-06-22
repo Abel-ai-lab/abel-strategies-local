@@ -1,0 +1,6 @@
+[
+  {"ticker": "AAA", "trading_date": "2026-01-01", "timestamp": "2026-01-01T00:00:00Z", "open": 100.0, "high": 100.0, "low": 100.0, "close": 100.0, "volume": 1000},
+  {"ticker": "AAA", "trading_date": "2026-01-02", "timestamp": "2026-01-02T00:00:00Z", "open": 101.0, "high": 101.0, "low": 101.0, "close": 101.0, "volume": 1000},
+  {"ticker": "BTCUSD", "trading_date": "2026-01-01", "timestamp": "2026-01-01T00:00:00Z", "open": 50000.0, "high": 50000.0, "low": 50000.0, "close": 50000.0, "volume": 10},
+  {"ticker": "BTCUSD", "trading_date": "2026-01-02", "timestamp": "2026-01-02T00:00:00Z", "open": 50250.0, "high": 50250.0, "low": 50250.0, "close": 50250.0, "volume": 10}
+]

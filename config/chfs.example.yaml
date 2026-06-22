@@ -1,0 +1,5 @@
+chfs:
+  base_url: https://chfs.example.com
+  username: replace-with-local-username
+  password: replace-with-local-password
+  description: Local CHFS endpoint for downloading strategy backtest trade logs.
