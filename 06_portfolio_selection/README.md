@@ -21,7 +21,20 @@ The current app portfolio surface is intentionally light. New ideas such as scan
 ## Tracked Process Files
 
 - `build_portfolio_selection.py`: builds generated 06 outputs.
+- `publish_admin_portfolio.py`: optionally publishes selected 06 portfolios to Abel admin.
 - `verify_portfolio_selection.py`: verifies generated 06 outputs.
+
+## Optional Abel Admin Publish
+
+After `build_portfolio_selection.py` has generated local outputs, publish a selected portfolio explicitly:
+
+```powershell
+uv run python 06_portfolio_selection/publish_admin_portfolio.py --portfolio stock --title "<admin portfolio title>"
+uv run python 06_portfolio_selection/publish_admin_portfolio.py --portfolio crypto --title "<admin portfolio title>"
+uv run python 06_portfolio_selection/publish_admin_portfolio.py --portfolio all --stock-title "<stock title>" --crypto-title "<crypto title>"
+```
+
+Set `ABEL_ADMIN_BASE_URL` and `ABEL_ADMIN_API_KEY` in ignored local environment before publishing. The script sends the key as `api-key: <key>`, validates local selected rows against the Abel official account's active rows in `02_paper_actuals/paper_subscriptions.json`, creates a same-title portfolio when none exists, and replaces members when exactly one active same-title portfolio already exists. Use `--dry-run` to validate local inputs without calling Abel admin.
 
 ## Generated Outputs
 
