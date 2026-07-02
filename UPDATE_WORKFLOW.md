@@ -10,6 +10,7 @@ This repo keeps the public workflow for producing two final generated outputs: `
 - Use `ROUTER_CONFIG=<path>` to select a router config.
 - Use `CHFS_CONFIG=<path>` to select a CHFS config.
 - Use `CAP_API_KEY` and optionally `CAP_BASE_URL` for CAP benchmark bars.
+- Use `ABEL_ADMIN_BASE_URL` and `ABEL_ADMIN_API_KEY` only when publishing selected 06 portfolios to Abel admin. The publish script sends `api-key: <key>`.
 - Local configs and `.env` are ignored because they contain credentials.
 - Python dependencies are managed by `uv`; run `uv sync` before refresh or verification on a new machine.
 
@@ -70,6 +71,24 @@ Run from the repo root.
 
    ```powershell
    uv run python 06_portfolio_selection/build_portfolio_selection.py
+   ```
+
+7. Optional: publish selected `06_portfolio_selection/` rows to Abel admin
+
+   Source: generated stock/crypto portfolio CSVs plus Abel official account active rows in `02_paper_actuals/paper_subscriptions.json`.
+
+   The publish command is explicit and does not run as part of refresh. It calls the Router web admin API under `/web/skill-dashboard/admin`, creates a portfolio when the title is new, and replaces members when exactly one active same-title portfolio already exists. It does not update the official public portfolio selection config.
+
+   ```powershell
+   uv run python 06_portfolio_selection/publish_admin_portfolio.py --portfolio stock --title "<admin portfolio title>"
+   uv run python 06_portfolio_selection/publish_admin_portfolio.py --portfolio crypto --title "<admin portfolio title>"
+   uv run python 06_portfolio_selection/publish_admin_portfolio.py --portfolio all --stock-title "<stock title>" --crypto-title "<crypto title>"
+   ```
+
+   Validate local inputs without calling Abel admin:
+
+   ```powershell
+   uv run python 06_portfolio_selection/publish_admin_portfolio.py --portfolio stock --title "<admin portfolio title>" --dry-run
    ```
 
 ## Verification
